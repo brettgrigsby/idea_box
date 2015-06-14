@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :users, only: [:new, :create, :show]
-  resources :ideas
+  resources :ideas, except: [:index]
 
   root :to => 'sessions#new'
 
