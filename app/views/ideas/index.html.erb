@@ -1,0 +1,11 @@
+<h1>My Idea's</h1>
+
+<p>
+  <%= link_to "New Idea", new_idea_path %>
+</p>
+
+<% @ideas.each do |idea| %>
+  <%= link_to idea.title, idea_path(idea) %> </br>
+<% end %>
+
+<!--<%#= link_to "Delete", song_path(song), method: :delete %>-->
