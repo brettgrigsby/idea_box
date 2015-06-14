@@ -11,9 +11,10 @@ describe 'user deletes idea', type: :feature do
     visit ideas_path
   end
 
-  it 'updates an idea' do
+  it 'deletes an idea' do
     page.click_link "Delete"
 
-    expect(page).to_not have_content("Idea One")
+    expect(page).to have_content("'Idea One' Destroyed!")
+    expect(page).not_to have_content('Delete')
   end
 end

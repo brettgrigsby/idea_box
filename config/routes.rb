@@ -5,8 +5,8 @@ Rails.application.routes.draw do
   root :to => 'sessions#new'
 
   namespace :admin do
-    resources :categories, only: [:index, :create, :destroy]
-    resources :images, only: [:index, :create, :destroy]
+    resources :categories, only: [:index, :new, :create, :destroy]
+    resources :images, only: [:index, :new, :create, :destroy]
   end
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'

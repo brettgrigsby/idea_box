@@ -11,7 +11,7 @@ class IdeasController < ApplicationController
     @idea = Idea.new(idea_params)
 
     if @idea.save
-      redirect_to idea_path(@idea)
+      redirect_to @idea.user
     else
       flash[:errors] = "Please try again"
       render :new
