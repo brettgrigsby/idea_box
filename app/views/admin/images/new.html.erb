@@ -1,0 +1,6 @@
+<%= form_for @image, :url => admin_images_path do |f| %>
+  <%= f.label :url %>
+  <%= f.text_field :url %>
+
+  <%= f.submit 'Add Image' %>
+<% end %>

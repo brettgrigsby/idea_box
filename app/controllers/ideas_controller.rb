@@ -9,9 +9,10 @@ class IdeasController < ApplicationController
 
   def create
     @idea = Idea.new(idea_params)
+    @idea.user_id = current_user.id
 
     if @idea.save
-      redirect_to @idea.user
+      redirect_to current_user
     else
       flash[:errors] = "Please try again"
       render :new
@@ -41,7 +42,7 @@ class IdeasController < ApplicationController
 
     flash.notice = "Idea '#{@idea.title}' Destroyed!"
 
-    redirect_to ideas_path
+    redirect_to @idea.user
   end
 
   private
