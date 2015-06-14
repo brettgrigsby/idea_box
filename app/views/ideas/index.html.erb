@@ -6,8 +6,8 @@
 
 <% @ideas.each do |idea| %>
   <%= link_to idea.title, idea_path(idea) %> |
-  <%= link_to "Edit", edit_idea_path(idea) %> </br>
+  <%= link_to "Edit", edit_idea_path(idea) %> |
+  <%= link_to "Delete", idea, method: :delete %></br>
 <% end %>
 
-
-<!--<%#= link_to "Delete", song_path(song), method: :delete %>-->
+<!--, data: { confirm: "Are you sure?" }-->
