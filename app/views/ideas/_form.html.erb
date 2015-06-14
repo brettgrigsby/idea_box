@@ -3,5 +3,7 @@
   <%= f.text_field :title %> </br>
   <%= f.label :body %>
   <%= f.text_area :body %> </br>
+  <%= f.collection_select(:category, Category.all, :id, :title) %>
+  <%= f.select :category, :id %>
   <%= f.submit "Create Idea" %>
 <% end %>
