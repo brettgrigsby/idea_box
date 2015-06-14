@@ -1,6 +1,7 @@
 <div>
 <% if @user.admin? %>
-  <%= link_to "Categories", admin_categories_path %>
+ <p><%= link_to "Categories", admin_categories_path %> |
+    <%= link_to "Images", admin_images_path %> </p>
 <% end %>
 </div>
 
