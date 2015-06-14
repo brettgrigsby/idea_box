@@ -11,7 +11,7 @@ describe 'admin Login', type: :feature do
     page.fill_in('Name', with: 'admin')
     page.fill_in('Password', with: 'pass')
     page.click_button('Login')
-    expect(page).to have_content("Add Category")
+    expect(page).to have_content("Categories")
   end
 
 end
