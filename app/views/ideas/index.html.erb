@@ -5,7 +5,9 @@
 </p>
 
 <% @ideas.each do |idea| %>
-  <%= link_to idea.title, idea_path(idea) %> </br>
+  <%= link_to idea.title, idea_path(idea) %> |
+  <%= link_to "Edit", edit_idea_path(idea) %> </br>
 <% end %>
+
 
 <!--<%#= link_to "Delete", song_path(song), method: :delete %>-->
