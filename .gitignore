@@ -15,4 +15,9 @@
 /log/*
 !/log/.keep
 /tmp
+<<<<<<< HEAD
 .idea/*
+=======
+
+/.idea
+>>>>>>> 1484b1abedabbd153a7565486c9da279b43d1962
