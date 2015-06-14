@@ -19,4 +19,10 @@ describe 'user registration view', type: :feature do
     page.click_button('Create User')
     expect(page).to have_content("Name can't be blank")
   end
+
+  it 'will not create a user without a password' do
+    page.fill_in('Name', with: 'Johnny')
+    page.click_button('Create User')
+    expect(page).to have_content("Password can't be blank")
+  end
 end
