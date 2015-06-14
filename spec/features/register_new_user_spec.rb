@@ -13,4 +13,5 @@ describe 'user registration view', type: :feature do
     page.click_button('Create User')
     expect(page).to have_content("Bob's Ideas")
   end
+
 end
